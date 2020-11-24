@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'payment_result.dart';
 
@@ -12,12 +12,14 @@ PaymentResult _$PaymentResultFromJson(Map<String, dynamic> json) {
   return _PaymentResult.fromJson(json);
 }
 
+/// @nodoc
 class _$PaymentResultTearOff {
   const _$PaymentResultTearOff();
 
+// ignore: unused_element
   _PaymentResult call(String result,
       [int id,
-      String status,
+      MercadoPagoPaymentStatus status,
       String statusDetail,
       String paymentMethodId,
       String paymentTypeId,
@@ -44,15 +46,22 @@ class _$PaymentResultTearOff {
       errorMessage,
     );
   }
+
+// ignore: unused_element
+  PaymentResult fromJson(Map<String, Object> json) {
+    return PaymentResult.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $PaymentResult = _$PaymentResultTearOff();
 
+/// @nodoc
 mixin _$PaymentResult {
   String get result;
   int get id;
-  String get status;
+  MercadoPagoPaymentStatus get status;
   String get statusDetail;
   String get paymentMethodId;
   String get paymentTypeId;
@@ -68,6 +77,7 @@ mixin _$PaymentResult {
   $PaymentResultCopyWith<PaymentResult> get copyWith;
 }
 
+/// @nodoc
 abstract class $PaymentResultCopyWith<$Res> {
   factory $PaymentResultCopyWith(
           PaymentResult value, $Res Function(PaymentResult) then) =
@@ -75,7 +85,7 @@ abstract class $PaymentResultCopyWith<$Res> {
   $Res call(
       {String result,
       int id,
-      String status,
+      MercadoPagoPaymentStatus status,
       String statusDetail,
       String paymentMethodId,
       String paymentTypeId,
@@ -88,6 +98,7 @@ abstract class $PaymentResultCopyWith<$Res> {
       String errorMessage});
 }
 
+/// @nodoc
 class _$PaymentResultCopyWithImpl<$Res>
     implements $PaymentResultCopyWith<$Res> {
   _$PaymentResultCopyWithImpl(this._value, this._then);
@@ -115,7 +126,9 @@ class _$PaymentResultCopyWithImpl<$Res>
     return _then(_value.copyWith(
       result: result == freezed ? _value.result : result as String,
       id: id == freezed ? _value.id : id as int,
-      status: status == freezed ? _value.status : status as String,
+      status: status == freezed
+          ? _value.status
+          : status as MercadoPagoPaymentStatus,
       statusDetail: statusDetail == freezed
           ? _value.statusDetail
           : statusDetail as String,
@@ -144,6 +157,7 @@ class _$PaymentResultCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$PaymentResultCopyWith<$Res>
     implements $PaymentResultCopyWith<$Res> {
   factory _$PaymentResultCopyWith(
@@ -153,7 +167,7 @@ abstract class _$PaymentResultCopyWith<$Res>
   $Res call(
       {String result,
       int id,
-      String status,
+      MercadoPagoPaymentStatus status,
       String statusDetail,
       String paymentMethodId,
       String paymentTypeId,
@@ -166,6 +180,7 @@ abstract class _$PaymentResultCopyWith<$Res>
       String errorMessage});
 }
 
+/// @nodoc
 class __$PaymentResultCopyWithImpl<$Res>
     extends _$PaymentResultCopyWithImpl<$Res>
     implements _$PaymentResultCopyWith<$Res> {
@@ -195,7 +210,7 @@ class __$PaymentResultCopyWithImpl<$Res>
     return _then(_PaymentResult(
       result == freezed ? _value.result : result as String,
       id == freezed ? _value.id : id as int,
-      status == freezed ? _value.status : status as String,
+      status == freezed ? _value.status : status as MercadoPagoPaymentStatus,
       statusDetail == freezed ? _value.statusDetail : statusDetail as String,
       paymentMethodId == freezed
           ? _value.paymentMethodId
@@ -215,6 +230,8 @@ class __$PaymentResultCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_PaymentResult implements _PaymentResult {
   const _$_PaymentResult(this.result,
       [this.id,
@@ -239,7 +256,7 @@ class _$_PaymentResult implements _PaymentResult {
   @override
   final int id;
   @override
-  final String status;
+  final MercadoPagoPaymentStatus status;
   @override
   final String statusDetail;
   @override
@@ -338,7 +355,7 @@ class _$_PaymentResult implements _PaymentResult {
 abstract class _PaymentResult implements PaymentResult {
   const factory _PaymentResult(String result,
       [int id,
-      String status,
+      MercadoPagoPaymentStatus status,
       String statusDetail,
       String paymentMethodId,
       String paymentTypeId,
@@ -358,7 +375,7 @@ abstract class _PaymentResult implements PaymentResult {
   @override
   int get id;
   @override
-  String get status;
+  MercadoPagoPaymentStatus get status;
   @override
   String get statusDetail;
   @override

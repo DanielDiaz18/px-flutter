@@ -12,10 +12,8 @@ class MercadoPagoMobileCheckout {
   /// Dummy method to test the Platform Channel.
   ///
   /// You can use this to add the platform used to in the checkout.
-  static Future<String> get platformVersion async {
-    final String version = await _channel.invokeMethod('getPlatformVersion');
-    return version;
-  }
+  static Future<String> get platformVersion =>
+      _channel.invokeMethod<String>('getPlatformVersion');
 
   /// Start a checkout for the given preference
   ///
@@ -33,7 +31,7 @@ class MercadoPagoMobileCheckout {
     String publicKey,
     String preferenceId,
   ) async {
-    Map<String, dynamic> result = await _channel.invokeMapMethod(
+    final result = await _channel.invokeMapMethod<String, dynamic>(
       'startCheckout',
       {
         "publicKey": publicKey,

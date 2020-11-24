@@ -8,7 +8,7 @@ abstract class PaymentResult with _$PaymentResult {
   const factory PaymentResult(
     String result, [
     int id,
-    String status,
+    MercadoPagoPaymentStatus status,
     String statusDetail,
     String paymentMethodId,
     String paymentTypeId,
@@ -19,11 +19,21 @@ abstract class PaymentResult with _$PaymentResult {
     String operationType,
     String transactionAmount,
     String errorMessage,
-  ]
-      // TODO: Payer
-      // TODO: transactionDetails
-      ) = _PaymentResult;
+    // TODO: Payer
+    // TODO: transactionDetails
+  ]) = _PaymentResult;
 
   factory PaymentResult.fromJson(Map<String, dynamic> json) =>
       _$PaymentResultFromJson(json);
+}
+
+enum MercadoPagoPaymentStatus {
+  @JsonValue('approved')
+  approved,
+  @JsonValue('in_progress')
+  inProgress,
+  @JsonValue('rejected')
+  rejected,
+  @JsonValue('pending')
+  pending
 }
