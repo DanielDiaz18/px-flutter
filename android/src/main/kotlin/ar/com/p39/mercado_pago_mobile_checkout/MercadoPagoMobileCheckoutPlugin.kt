@@ -137,9 +137,9 @@ public class MercadoPagoMobileCheckoutPlugin: FlutterPlugin, MethodCallHandler, 
       } else if (resultCode == RESULT_CANCELED) {
         if (data?.extras != null && data.extras?.containsKey(MercadoPagoCheckout.EXTRA_ERROR) == true) {
           val mercadoPagoError = data.getSerializableExtra(MercadoPagoCheckout.EXTRA_ERROR) as MercadoPagoError
-          pendingResult?.error("0", mercadoPagoError.message,null)
+          pendingResult?.error("cancelled", mercadoPagoError.message,null)
         } else {
-          pendingResult?.error("0","cancelled",null)
+          pendingResult?.error("cancelled","cancelled",null)
         }
       }
       pendingResult = null
