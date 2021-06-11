@@ -15,11 +15,14 @@ A new Flutter plugin.
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
-  s.dependency 'MercadoPagoSDK'
+  s.dependency 'MercadoPagoSDK', '~> 4.32.4'
+  s.dependency 'MLCardForm', '0.9.1'
+  s.dependency 'MLCardDrawer', '1.5.1'
+  s.dependency 'MLBusinessComponents', '1.29.0'
   s.platform     = :ios, '10.0'
-  s.ios.deployment_target  = '9.0'
 
-  # Flutter.framework does not contain a i386 slice. Only x86_64 simulators are supported.
+
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'VALID_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }
   s.swift_version = '4.2'
+  s.static_framework = true
 end
